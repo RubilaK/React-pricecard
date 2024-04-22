@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>| Price Cards</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <main>
+    <div id="title_part">
+      <div class="title">
+        <h1>Our Pricing</h1>
+      </div>
+    </div>
+
+    <div id="option_part">
+        <h2>Annually</h2>
+
+        <input type="checkbox" name="checkbox" id="check" checked="" onclick="enable(this)">
+
+        <h2>Monthly</h2>
+    </div>
+    
+    <div id="card_part">
+
+      <div class="card card_1">
+        <h3>Free</h3>
+        <p class="month_price">&dollar;0.0</p>
+        <p class="annual_price">&dollar;50.0</p>
+
+        <ul class="info">
+          <li>50 GB Storage</li>
+          <li>SingleUsers </li>
+          <li>Unlimited Public Projects</li>
+          <li>Community Access</li>
+
+
+          <li><button class="btn">Button</button></li>
+        </ul>
+        
+      </div>
+
+      <div class="card card_2">
+        <h3>Plus</h3>
+        <p class="month_price">$9.00</p>
+        <p class="annual_price">$99.00;</p>
+
+        <ul class="info">
+          <li>1 TB Storage</li>
+          <li>5 Users Allowed</li>
+          <li>Send up to 10 GB</li>
+          <li><button class="btn">Button</button></li>
+        </ul>
+      </div>
+
+      <div class="card card_3">
+        <h3>PRO</h3>
+        <p class="month_price">&dollar;39.99</p>
+        <p class="annual_price">&dollar;399.99</p>
+
+        <ul class="info">
+          <li>2 TB Storage</li>
+          <li>10 Users Allowed</li>
+          <li>Send up to 20 GB</li>
+          <li><button class="btn">Button</button></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+  </main>
+<script>
+      var check = document.getElementById("check"),
+          month_price = document.querySelectorAll(".month_price"),
+          annual_price = document.querySelectorAll(".annual_price");
+      const enable = (e) =>{
+        if(e.checked){
+           for(let i=0;i<3;i++){
+            month_price[i].style.display = "block";
+            annual_price[i].style.display = "none";
+           }
+        }else{
+           for(let i=0;i<3;i++){
+            month_price[i].style.display = "none";
+            annual_price[i].style.display = "block";
+           }
+        }
+      }
+      
+    </script>
+</body>
+</html>
